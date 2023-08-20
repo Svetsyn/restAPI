@@ -1,0 +1,51 @@
+package com.example.universeapp.model.dto;
+
+import com.example.universeapp.model.enums.CourseType;
+
+import javax.validation.constraints.*;
+
+public class TeacherDTO {
+    private String name;
+    private Integer age;
+    private Integer teacherGroup;
+    private CourseType courseType;
+
+    @NotNull
+    @NotEmpty
+    @Size(min = 1)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Min(value = 1,message = "Age can not be '0'!")
+    @Positive(message = "The value must be positive!")
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    @Min(value = 1,message = "Group can not be '0'1")
+    @Positive(message = "The value must be positive!")
+    public Integer getTeacherGroup() {
+        return teacherGroup;
+    }
+
+    public void setTeacherGroup(Integer teacherGroup) {
+        this.teacherGroup = teacherGroup;
+    }
+
+    public CourseType getCourseType() {
+        return courseType;
+    }
+
+    public void setCourseType(CourseType courseType) {
+        this.courseType = courseType;
+    }
+}

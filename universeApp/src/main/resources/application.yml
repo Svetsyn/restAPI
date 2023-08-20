@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    # Put here your user name
+    username: root
+    # Put here your password
+    password:
+    url: "jdbc:mysql://localhost:3306/universe_app_db?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true"
+  jpa:
+    #Database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
